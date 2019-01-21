@@ -21,9 +21,13 @@ app.get('/form', (req, res) => {
 });
 
 app.post('/result', (req, res) => {
-    res.render('result.hbs', {name:req.body.username, email:req.body.emailaddress, comments: req.body.comments})
+    res.render('result.hbs', {
+        name: req.body.username,
+        email: req.body.emailaddress,
+        comments: req.body.comments
+    })
 });
 
-app.listen(3000, () =>{
+app.listen(3000, () => {
     console.log('Server is up at localhost:3000');
 });
